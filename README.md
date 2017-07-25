@@ -1,2 +1,2 @@
-# help-with-js
-help-with-js
+# TriviaGame
+TriviaGame
