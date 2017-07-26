@@ -88,11 +88,18 @@ $("#start-message").html('<h3>' + 'Here we go!!' + '</h3>');
 	$("#answer10d").html('<div class="radio answers">'+ '<label>' + '<input type="radio" id="ans10d" name="answer10" value="false">' + 'Abracadabra' + '</label>' + '</div>');
 	
 
-$(document).on("click", ".answers", function() {
+$(document).on("click", "input[type=radio]", function() {
 	console.log("hello");
+	// console.log("hello");
+	// ************ WE WERE MISSING THIS SMALL CODE. WE HAVE TO STORE THE VALUE SOMEWHERE IN THE VARIABLE.
+	// ************ BASED ON THAT VARIABLE WE CAN SET OUR CONDITION.
+	// BUT THIS CODE IS ONLY FOR THIS QUESTION YOU HAVE TO MODIFY IT ACCORDING TO OTHER QUESTIONS
+	var ans = $('input[name=answer10]:checked').val(); 
+	console.log(ans);
     
     //if ($("input[id=ans10a]:checked")) {
-    if ($("#answer10a").checked) {
+    if (ans === "true") {
+    
     	correct++;
     	console.log(correct);
      }else {
